@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>New Registration</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/donatemoney.css' %}">
+  <link href="{% static 'css/layout.min.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body class="bg-gradient-primary">
+
+  <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-12 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Add New Registration</h1>
+                  </div>
+                  
+                    
+                    
+                     
+
+                    <hr>
+                    
+ 
+                                      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12"></div>
+                                          <div class="containerform">
+                                              <form enctype="multipart/form-data" action="/addNew" method="post">
+                                                {% csrf_token %}
+                                                  <label for="First Name" >First Name</label><br>
+                                                  <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+                                                  <br>
+
+                                                  <label for="lastname" >Last Name</label><br>
+                                                  <input type="text" id="lastname" name="lastname" placeholder="Last Name" required>
+                                                  <br>
+
+                                                  <label for="gender">Gender</label><br>
+                                                  <select  id="gender" name = 'gender' placeholder="Select your gender" required>
+                                                  <option>Female</option>
+                                                  <option>Male</option>
+                                                  </select>
+                                                  <br>
+
+                                                  <label for="dob">Date of Birth</label><br>
+                                                  <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" required>
+                                                  <br>
+
+                                                  <label for="mobileNum" >Call number</label><br>
+                                                  <input type="text" id="mobileNum" name="mobileNum" placeholder="Call Number" required>
+                                                  <br>
+
+                                                  <label for="Whatsapp" >Whatsapp number</label><br>
+                                                  <input type="text" id="Whatsapp" name="Whatsapp" placeholder="Whatsapp Number" required>
+                                                  <br>
+
+                                                  <label for="ministry" >Ministry You Belong</label><br>
+                                                  <input type="text" id="ministry" name="ministry" placeholder="Ministry You Belong" required>
+                                                  <br>
+
+                                                  <label for="branch" >Branch</label><br>
+                                                  <input type="text" id="branch" name="branch" placeholder="Branch "required>
+                                                  <br>
+
+                                                  <label for="campus" >Campus</label><br>
+                                                  <input type="text" id="campus" name="campus" placeholder="Campus " required>
+                                                  <br>
+
+                                                  <label for="hostel" >Hostel</label><br>
+                                                  <input type="text" id="hostel" name="hostel" placeholder="Hostel " required>
+                                                  <br>
+
+                                                  <label for="address" >Home Address</label><br>
+                                                  <input type="text" id="address" name="address" placeholder="Home address" required>
+                                                  <br>
+
+                                                  <label for="denomination" >Denomination</label><br>
+                                                  <input type="text" id="denomination" name="denomination" placeholder="Denomination" required>
+                                                  <br>
+
+                                                  <label for="year" >Year appointed</label><br>
+                                                  <input type="text" id="year" name="year" placeholder="Year appointed" required>
+                                                  <br>
+
+                                                  <label for="country" >Country</label><br>
+                                                  <input type="text" id="country" name="country" placeholder="Country" required>
+                                                  <br>
+
+                                                  <label for="city" >City</label><br>
+                                                  <input type="text" id="city" name="city" placeholder="City" required>
+                                                  <br>
+
+                                                  <label for="qualification" >Qualification</label><br>
+                                                  <input type="text" id="qualification" name="qualification" placeholder="Qualification" required>
+                                                  <br>
+
+                                                  <label for="profession" >Profession</label><br>
+                                                  <input type="text" id="profession" name="profession" placeholder="Profession"required>
+                                                  <br>
+
+                                                  <label for="occupation" >Occupation</label><br>
+                                                  <input type="text" id="occupation" name="occupation" placeholder="Occupation" required>
+                                                  <br>
+                                                 
+
+                                                  <label for="ms" >Marital Status</label><br>
+                                                 
+                                                  <input type="radio" name="optional2" value="single" required> Single 
+                                                  <input type="radio" name="optional2" value="married"> Married 
+                                                  <input type="radio" name="optional2" value="divorced"> Divorced 
+                                                  <input type="radio" name="optional2" value="widow"> Widow 
+                                                  <input type="radio" name="optional2" value="widower"> Widower 
+
+                                                  <br>
+                                                  <label for="region">Region: </label>
+                                                  <input type="text" name="region" placeholder="Region">
+                                                  <br>
+
+                                                  <br>
+                                                  <label for="bishop">Bishop in Charge: </label>
+                                                  <input type="text" name="bishop" placeholder="Bishop in Charge">
+                                                  <br>
+
+                                                  <br>
+                                                  <label form="yearOrd"> Year Ordained: </label>
+                                                  <input type="text" name="yearOrd" placeholder="Year Ordained">
+                                                  <br>
+
+                                                  <br>
+                                                  Select image: <input type="file" name="images" multiple><br>
+                                                  <button type="submit">Submit </button>
+                                                
+                                                <!-- <a href="members" class="btn btn-primary btn-user btn-block">
+                                                      <input type="submit"  value="Submit">  -->
+                                                     
+                                              
+                                                  <input type="reset">
+                                              </form>
+                                              
+                                          </div>   
+                                      </div>
+                       
+                  
+                    
+                   
+                
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'vendor/jquery/jquery.min.js ' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js ' %}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+  var modal =document.getElementById('id01');
+   var modal2 =document.getElementById('id02');
+   var modal3 =document.getElementById('id03');
+   var modal4 =document.getElementById('id04');
+   var modal5 =document.getElementById('id05');
+  
+
+
+  window.onclick = function(event){
+      if (event.target ==modal)
+      {
+          modal.style.display="none";
+      }
+
+       if (event.target ==modal2)
+      {
+          modal2.style.display="none";
+      }
+       if (event.target ==modal3)
+      {
+          modal3.style.display="none";
+      }
+       if (event.target ==modal4)
+      {
+          modal4.style.display="none";
+      }
+       if (event.target ==modal5)
+      {
+          modal5.style.display="none";
+      }
+  }
+
+
+
+
+</script>
